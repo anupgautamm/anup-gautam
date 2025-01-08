@@ -3,29 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anup Gautam</title>
+    <title>Interactive Particle Canvas</title>
     <style>
-        body {
+        body, html {
             margin: 0;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: #f0f8ff;
-            font-family: Arial, sans-serif;
+            overflow: hidden;
+            background: #2b2d42;
         }
-        h1 {
-            font-size: 2rem;
-            color: #09186d;
-            animation: fadeIn 2s ease-in-out infinite alternate;
-        }
-        @keyframes fadeIn {
-            0% { opacity: 0.5; transform: scale(0.9); }
-            100% { opacity: 1; transform: scale(1); }
+        canvas {
+            display: block;
         }
     </style>
 </head>
 <body>
-    <h1>Hi, my name is Anup Gautam.</h1>
+    <canvas id="particleCanvas"></canvas>
+    <script src="particle.js"></script>
 </body>
 </html>
