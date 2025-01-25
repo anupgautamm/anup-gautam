@@ -150,3 +150,7 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
+document.getElementById("quit-button").addEventListener("click", function() {
+    window.location.href = "/index.html"; 
+});
+
