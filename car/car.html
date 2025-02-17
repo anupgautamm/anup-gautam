@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moving Car
+    </title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #87CEEB;
+            overflow: hidden;
+        }
+        .sky {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 60%;
+            background-color: #87CEEB;
+        }
+        .sun {
+            position: absolute;
+            top: 50px;
+            right: 100px;
+            width: 80px;
+            height: 80px;
+            background: yellow;
+            border-radius: 50%;
+        }
+        .cloud {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            width: 80px;
+            height: 50px;
+            animation: moveCloud 10s linear infinite;
+        }
+        .cloud::before, .cloud::after {
+            content: "";
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+        }
+        .cloud::before {
+            width: 60px;
+            height: 60px;
+            top: -30px;
+            left: 20px;
+        }
+        .cloud::after {
+            width: 200px;
+            height: 70px;
+            top: -20px;
+            right: 20px;
+        }
+        .cloud1 { top: 80px; left: -100px; }
+        .cloud2 { top: 150px; left: -200px; }
+        .cloud3 { top: 50px; left: -300px; }
+        
+        @keyframes moveCloud {
+            0% { left: -1px; }
+            100% { left: 100%; }
+        }
+        .bird {
+            position: absolute;
+            top: 200px;
+            left: -50px;
+            width: 30px;
+            height: 20px;
+            background: black;
+            clip-path: polygon(0% 70%, 70% 0%, 100% 50%, 50% 100%);
+            animation: flyBird 5s linear infinite;
+        }
+        @keyframes flyBird {
+            0% { left: -20px; }
+            100% { left: 100%; }
+        }
+        .road {
+            position: absolute;
+            bottom: 50px;
+            width: 100%;
+            height: 100px;
+            background: gray;
+            border-top: 5px dashed white;
+        }
+        .car {
+            position: absolute;
+            bottom: 80px;
+            width: 250px;
+            height: 100px;
+            background: red;
+            border-radius: 20px;
+            animation: moveCar 5s linear infinite;
+        }
+        .car::before {
+            content: "";
+            position: absolute;
+            top: -40px;
+            left: 30px;
+            width: 190px;
+            height: 50px;
+            background: white;
+            border-radius: 10px;
+        }
+        .wheel {
+            position: absolute;
+            bottom: -20px;
+            width: 40px;
+            height: 40px;
+            background: black;
+            border-radius: 50%;
+            animation: wheelRotate 1s linear infinite;
+        }
+        .wheel-left {
+            left: 30px;
+        }
+        .wheel-right {
+            right: 30px;
+        }
+        @keyframes moveCar {
+            0% { left: -300px; }
+            100% { left: 100%; }
+        }
+        @keyframes wheelRotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="sky">
+        <div class="sun"></div>
+        <div class="cloud cloud1"></div>
+        <div class="cloud cloud2"></div>
+        <div class="cloud cloud3"></div>
+        <div class="bird"></div>
+    </div>
+    <div class="road"></div>
+    <div class="car">
+        <div class="wheel wheel-left"></div>
+        <div class="wheel wheel-right"></div>
+    </div>
+</body>
+</html>
