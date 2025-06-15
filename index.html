@@ -22,7 +22,7 @@
           "url": "https://anup-gautam.com.np",
           "sameAs": [
             "https://www.linkedin.com/in/anup-gautam-developer/",
-            "https://github.com/anup-gautam"
+            "https://github.com/anupgautamm"
           ],
           "jobTitle": "Full Stack Developer",
           "worksFor": {
@@ -81,6 +81,35 @@
             text-decoration: none;
             font-size: 18px;
         }
+
+        .cv-navbar {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: rgba(213, 13, 46, 0.9);
+            border-radius: 30px;
+            padding: 10px 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .cv-button {
+            text-decoration: none; 
+            color: white;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 500;
+        }
+
+        .cv-button:hover {
+            transform: translateY(-2px);
+            color: rgb(13, 13, 13);
+        }
+
+        .cv-button i {
+            font-size: 18px;
+        }
+
 
         #about, #projects, #contact {
             background-color: rgb(2, 2, 59);
@@ -195,6 +224,14 @@
         <a href="#projects" title="projects"><i class="fas fa-briefcase"></i></a>
         <a href="#contact" title="contact"><i class="fas fa-envelope"></i></a>
     </div>
+    <div class="cv-navbar">
+        <a href="download/cv/Anup-Gautam-cv.pdf" 
+           class="cv-button" 
+           title="Download CV" 
+           target="_blank">
+            <i class="fa fa-file"></i> Open CV
+        </a>
+    </div>       
 </body>
     <script src="particle.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
